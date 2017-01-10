@@ -13,18 +13,16 @@
 #include <gio/gio.h>
 #include <stdbool.h>
 
-
-// Put the data that we want to be persistent in a struct so that it can be passed
-// into a callback function as the argument gpointer user_data and then dissected
-// inside the function
-struct Data
+struct BrightnessData
 {
 	GtkWidget *level_bar;
 	GtkWidget *window;
 	bool isHidden;
+	char* brightness;
+	char* max_brightness;
 };
-
-static int readBrightness (char fileLoc[]);
+static gdouble readBrightness (char fileLoc[]);
+static gboolean print ();
 static gboolean updateBar (GFileMonitor *monitor,
 							GFile *file,
 							GFile *other_file,
@@ -32,6 +30,7 @@ static gboolean updateBar (GFileMonitor *monitor,
 							gpointer user_data);
 static gboolean timeout_window (gpointer user_data);
 static gboolean fadeout_window (gpointer user_data);
-
+struct BrightnessData* brightness_window(struct BrightnessData*);
+void brightness_free (struct BrightnessData* brightness_data);
 
 #endif /* BRIGHTNESS_H_ */

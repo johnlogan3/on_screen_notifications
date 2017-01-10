@@ -1,4 +1,4 @@
-brightness.o: ../brightness.c ../popup.h /usr/include/gtk-3.0/gtk/gtk.h \
+popup.o: ../popup.c ../popup.h /usr/include/gtk-3.0/gtk/gtk.h \
  /usr/include/gtk-3.0/gdk/gdk.h /usr/include/gtk-3.0/gdk/gdkconfig.h \
  /usr/include/glib-2.0/glib.h /usr/include/glib-2.0/glib/galloca.h \
  /usr/include/glib-2.0/glib/gtypes.h \
@@ -568,7 +568,7 @@ brightness.o: ../brightness.c ../popup.h /usr/include/gtk-3.0/gtk/gtk.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
- /usr/include/gtk-3.0/gtk/gtk-autocleanups.h ../brightness.h
+ /usr/include/gtk-3.0/gtk/gtk-autocleanups.h
 
 ../popup.h:
 
@@ -1787,5 +1787,3 @@ brightness.o: ../brightness.c ../popup.h /usr/include/gtk-3.0/gtk/gtk.h \
 /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h:
 
 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h:
-
-../brightness.h:

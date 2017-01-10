@@ -22,19 +22,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: brightness
+all: on_screen_notifications
 
 # Tool invocations
-brightness: $(OBJS) $(USER_OBJS)
+on_screen_notifications: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -o "brightness" $(OBJS) $(USER_OBJS) $(LIBS) `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0`
+	gcc -o "on_screen_notifications" $(OBJS) $(USER_OBJS) $(LIBS) `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0`
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) brightness
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) on_screen_notifications
 	-@echo ' '
 
 .PHONY: all clean dependents

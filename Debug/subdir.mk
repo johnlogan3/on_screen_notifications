@@ -4,13 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../brightness.c 
+../brightness.c \
+../mainWindow.c \
+../popup.c 
 
 OBJS += \
-./brightness.o 
+./brightness.o \
+./mainWindow.o \
+./popup.o 
 
 C_DEPS += \
-./brightness.d 
+./brightness.d \
+./mainWindow.d \
+./popup.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
